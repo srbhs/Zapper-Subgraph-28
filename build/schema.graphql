@@ -1,0 +1,2468 @@
+type Curve_to_Curve_PipeOwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Curve_to_Curve_PipeCurve2CurveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_to_Curve_PipeapproveTokenCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_to_Curve_PipedestructCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_to_Curve_PipeinCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_to_Curve_PiperenounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_to_Curve_PipetoggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_to_Curve_PipetransferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Curve_to_Curve_PipewithdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_Curve_PipeOwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Uni_Curve_PipeCurve2UniCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_Curve_PipeUni2CurveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_Curve_PipeapproveTokenCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_Curve_PipedestructCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_Curve_PipeinCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_Curve_PiperenounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_Curve_PipetoggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_Curve_PipetransferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Uni_Curve_PipewithdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ETH_ERC20_Curve_General_Zap_V1OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type ETH_ERC20_Curve_General_Zap_V1ZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  crvTokensBought: BigInt! # uint256
+}
+
+type ETH_ERC20_Curve_General_Zap_V1approveTokenCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ETH_ERC20_Curve_General_Zap_V1destructCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ETH_ERC20_Curve_General_Zap_V1inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ETH_ERC20_Curve_General_Zap_V1renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ETH_ERC20_Curve_General_Zap_V1setnewdzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ETH_ERC20_Curve_General_Zap_V1setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ETH_ERC20_Curve_General_Zap_V1toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ETH_ERC20_Curve_General_Zap_V1transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type ETH_ERC20_Curve_General_Zap_V1withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type MultiPoolZapV1_4OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type MultiPoolZapV1_4multipleZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  underlyingTokenAddresses: [Bytes]! # address[]
+  respectiveWeightedValues: [BigInt]! # uint256[]
+}
+
+type MultiPoolZapV1_4renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type MultiPoolZapV1_4setUniswapFactoryCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type MultiPoolZapV1_4setnewdzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type MultiPoolZapV1_4setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type MultiPoolZapV1_4setuniswapPoolZapAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type MultiPoolZapV1_4transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type ERC20toUniPoolZapV2_GeneraldetailsEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  user: Bytes! # address
+  toWhomIssued: Bytes! # address
+  IncomingTokenAddress: Bytes! # address
+  UniPoolUnderlyingTokenAddressTokenAddress: Bytes! # address
+}
+
+type ERC20toUniPoolZapV2_GeneralresidualETHEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  residualETHtransferred: BigInt! # uint256
+}
+
+type ERC20toUniPoolZapV2_GeneralLetsInvestCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: Boolean! # bool
+}
+
+type ERC20toUniPoolZapV2_GeneralinCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ERC20toUniPoolZapV2_GeneraltoggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ERC20toUniPoolZapV2_GeneraltransferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type ERC20toUniPoolZapV2_GeneralwithdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ERC20toUniPoolZapV1_GeneraldetailsEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  user: Bytes! # address
+  toWhomIssued: Bytes! # address
+  IncomingTokenAddress: Bytes! # address
+  UniPoolUnderlyingTokenAddressTokenAddress: Bytes! # address
+}
+
+type ERC20toUniPoolZapV1_GeneralresidualETHEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  residualETHtransferred: BigInt! # uint256
+}
+
+type ERC20toUniPoolZapV1_GeneralLetsInvestCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: Boolean! # bool
+}
+
+type ERC20toUniPoolZapV1_GeneralinCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ERC20toUniPoolZapV1_GeneraltoggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type ERC20toUniPoolZapV1_GeneraltransferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type ERC20toUniPoolZapV1_GeneralwithdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Balancer_Unzap_V1_1ZapoutEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1EasyZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  slippage: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1ZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  slippage: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1destructCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1setnewdzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Balancer_Unzap_V1_1updateSlippageCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Balancer_ZapIn_General_V1ZapinEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1EasyZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  tokensBought: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1ZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  tokensBought: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1destructCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1setnewdzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Balancer_ZapIn_General_V1withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1_1OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Balancer_Unzap_V1_1_1ZapoutEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1_1EasyZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  slippage: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1_1ZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  slippage: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1_1destructCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1_1inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1_1renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1_1setnewdzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1_1setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1_1toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1_1transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Balancer_Unzap_V1_1_1updateSlippageCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_Unzap_V1_1_1withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV2_ZapInOwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type UniswapV2_ZapInZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  slippage: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type UniswapV2_ZapIndestructCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV2_ZapIninCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV2_ZapInrenounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV2_ZapInsetnewdzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV2_ZapInsetnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV2_ZapIntoggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV2_ZapIntransferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type UniswapV2_ZapInupdateSlippageCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV2_ZapInwithdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1_1OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Balancer_ZapIn_General_V1_1ZapinEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1_1EasyZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  tokensBought: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1_1ZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  tokensBought: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1_1destructCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1_1inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1_1renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1_1setnewdzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1_1setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1_1toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V1_1transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Balancer_ZapIn_General_V1_1withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_V1_V2_PipeOwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Uni_V1_V2_PipeliquidityTokensQtyEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  param0: BigInt! # uint256
+  param1: Bytes! # address
+  param2: BigInt! # uint256
+}
+
+type Uni_V1_V2_PipeV1toV2PipeCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  fromTokenAddress: Bytes! # address
+  uniV1Amount: BigInt! # uint256
+  toTokenAddress: Bytes! # address
+  toWhomToIssue: Bytes! # address
+  value0: BigInt! # uint256
+}
+
+type Uni_V1_V2_PipedestructCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_V1_V2_PipeinCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_V1_V2_PiperenounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_V1_V2_PipesetnewdzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_V1_V2_PipesetnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_V1_V2_PipetoggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Uni_V1_V2_PipetransferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Uni_V1_V2_PipewithdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Balancer_ZapIn_General_V2ZapinEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2EasyZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  tokensBought: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2ZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  tokensBought: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2destructCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2setnewdzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Balancer_ZapIn_General_V2withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Balancer_ZapOut_General_V2ZapoutEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2EasyZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2ZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2setnewdzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Balancer_ZapOut_General_V2withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Curve_General_ZapOut_V2ZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  ToTokensBought: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2ZapoutToUnderlyingCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2token2EthCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  tokens2Trade: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2token2TokenCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  tokens2Trade: BigInt! # uint256
+  tokenBought: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2addCRVTokenCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2addCTokenCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2addYTokenCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2approveTokenCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2setCRVTokenAddressesCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2setnewdzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2setnewsUSDTokenAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2setcTokensCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2setyTokensCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_General_ZapOut_V2transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Curve_General_ZapOut_V2withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV1_ZapOut_General_V2OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type UniswapV1_ZapOut_General_V2detailsEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  ExchangeAddress: Bytes! # address
+  TokenAdddress: Bytes! # address
+  LiqRed: BigInt! # uint256
+  ethRec: BigInt! # uint256
+  tokenRec: BigInt! # uint256
+  func: Bytes! # bytes32
+}
+
+type UniswapV1_ZapOut_General_V2LetsWithdrawonlyERCCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  LiquidityTokenSold: BigInt! # uint256
+  value0: Boolean! # bool
+}
+
+type UniswapV1_ZapOut_General_V2LetsWithdrawonlyETHCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  LiquidityTokenSold: BigInt! # uint256
+  value0: Boolean! # bool
+}
+
+type UniswapV1_ZapOut_General_V2inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV1_ZapOut_General_V2renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV1_ZapOut_General_V2setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV1_ZapOut_General_V2toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV1_ZapOut_General_V2transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type UniswapV1_ZapOut_General_V2withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_1OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_1ZapinEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_1ZapoutEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_1ZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_1ZapOutToUnderlyingCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_1addNewYVaultCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_1inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_1renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_1setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_1toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_1transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_1updateCurveZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  CurveZapInGeneralAddress: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_1withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2_2OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Balancer_ZapOut_General_V2_2ZapoutEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2_2EasyZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2_2inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2_2renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2_2setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2_2toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapOut_General_V2_2transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Balancer_ZapOut_General_V2_2withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_2OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_2ZapinEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_2ZapoutEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_2ZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_2ZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_2inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_2renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_2setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_2toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_2transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_2updateCurveZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  CurveZapInGeneralAddress: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_2updateCurveZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  CurveZapOutGeneralAddress: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_2withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_3OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_3ZapinEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_3ZapoutEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_3ZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_3ZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_3addNewCurveExchangeCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  curvePoolToken: Bytes! # address
+  curveExchangeAddress: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_3inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_3renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_3setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_3toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_3transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_3updateCurveZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  CurveZapInGeneralAddress: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_3updateCurveZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  CurveZapOutGeneralAddress: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_3withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_4OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_4ZapinEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_4ZapoutEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_4ZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_4ZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_4addNewCurveExchangeCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  curvePoolToken: Bytes! # address
+  curveExchangeAddress: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_4inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_4renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_4setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_4toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type yVault_ZapInOut_General_V1_4transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_4updateCurveZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  CurveZapInGeneralAddress: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_4updateCurveZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  CurveZapOutGeneralAddress: Bytes! # address
+}
+
+type yVault_ZapInOut_General_V1_4withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2_6OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Balancer_ZapIn_General_V2_6zapEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  zapContract: Bytes! # address
+  userAddress: Bytes! # address
+  tokenAddress: Bytes! # address
+  volume: BigInt! # uint256
+  timestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2_6ZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  tokensBought: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2_6inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2_6renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2_6setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2_6setnewzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2_6toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_ZapIn_General_V2_6transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Balancer_ZapIn_General_V2_6withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_UniswapV2_Pipe_V1_4OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Balancer_UniswapV2_Pipe_V1_4PipeBalancerUniV2Call @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type Balancer_UniswapV2_Pipe_V1_4PipeUniV2BalancerCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type Balancer_UniswapV2_Pipe_V1_4inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_UniswapV2_Pipe_V1_4renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_UniswapV2_Pipe_V1_4setBalancerZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_UniswapV2_Pipe_V1_4setUniswapV2ZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_UniswapV2_Pipe_V1_4setUniswapV2ZapOutCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_UniswapV2_Pipe_V1_4setbalancerZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_UniswapV2_Pipe_V1_4toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Balancer_UniswapV2_Pipe_V1_4transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Balancer_UniswapV2_Pipe_V1_4withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Zapper_Swap_General_V1_3OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Zapper_Swap_General_V1_3MultiExchangeSwapCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  toWhomToIssue: Bytes! # address
+  path: [Bytes]! # address[]
+  amountIn: BigInt! # uint256
+  minTokenOut: BigInt! # uint256
+  starts: [Int]! # uint8[]
+  withPool: [Int]! # uint8[]
+  poolData: [Bytes]! # address[]
+  tokensBought: BigInt! # uint256
+}
+
+type Zapper_Swap_General_V1_3addATokenCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Zapper_Swap_General_V1_3addCTokenCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Zapper_Swap_General_V1_3addYTokenCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Zapper_Swap_General_V1_3inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Zapper_Swap_General_V1_3renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Zapper_Swap_General_V1_3toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Zapper_Swap_General_V1_3transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Zapper_Swap_General_V1_3unwrapCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  tokens2Trade: BigInt! # uint256
+  minTokens: BigInt! # uint256
+  tokensUnwrapped: BigInt! # uint256
+  toToken: Bytes! # address
+}
+
+type Zapper_Swap_General_V1_3unwrapWethCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  tokens2Trade: BigInt! # uint256
+  minTokens: BigInt! # uint256
+  tokensUnwrapped: BigInt! # uint256
+  toToken: Bytes! # address
+}
+
+type Zapper_Swap_General_V1_3wrapCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  tokens2Trade: BigInt! # uint256
+  minTokens: BigInt! # uint256
+  tokensWrapped: BigInt! # uint256
+}
+
+type UniswapV2_ZapIn_General_V2_4_1OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type UniswapV2_ZapIn_General_V2_4_1ZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: BigInt! # uint256
+}
+
+type UniswapV2_ZapIn_General_V2_4_1inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV2_ZapIn_General_V2_4_1renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV2_ZapIn_General_V2_4_1setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV2_ZapIn_General_V2_4_1toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type UniswapV2_ZapIn_General_V2_4_1transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type UniswapV2_ZapIn_General_V2_4_1withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_ZapIn_General_V1_9OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Curve_ZapIn_General_V1_9ZapInCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  toWhomToIssue: Bytes! # address
+  fromToken: Bytes! # address
+  swapAddress: Bytes! # address
+  incomingTokenQty: BigInt! # uint256
+  minPoolTokens: BigInt! # uint256
+  crvTokensBought: BigInt! # uint256
+}
+
+type Curve_ZapIn_General_V1_9addPoolCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  swapAddress: Bytes! # address
+  tokenAddress: Bytes! # address
+  poolTokens: [Bytes]! # address[4]
+  isMetaPool: Boolean! # bool
+}
+
+type Curve_ZapIn_General_V1_9inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_ZapIn_General_V1_9renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_ZapIn_General_V1_9setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_ZapIn_General_V1_9setnewzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_ZapIn_General_V1_9toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Curve_ZapIn_General_V1_9transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Curve_ZapIn_General_V1_9updateIntermediateStableCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newIntermediate: Bytes! # address
+}
+
+type Curve_ZapIn_General_V1_9updatePoolCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  swapAddress: Bytes! # address
+  tokenAddress: Bytes! # address
+  poolTokens: [Bytes]! # address[4]
+  isMetaPool: Boolean! # bool
+}
+
+type Curve_ZapIn_General_V1_9withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Unipool_Bridge_Zap_V1OwnershipTransferredEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Unipool_Bridge_Zap_V1ZapBridgeCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  value0: Boolean! # bool
+}
+
+type Unipool_Bridge_Zap_V1destructCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Unipool_Bridge_Zap_V1inCaseTokengetsStuckCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Unipool_Bridge_Zap_V1renounceOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Unipool_Bridge_Zap_V1setnewUniSwapFactoryAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Unipool_Bridge_Zap_V1setnewdzgoodwillAddressCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Unipool_Bridge_Zap_V1setnewgoodwillCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Unipool_Bridge_Zap_V1toggleContractActiveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type Unipool_Bridge_Zap_V1transferOwnershipCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  newOwner: Bytes! # address
+}
+
+type Unipool_Bridge_Zap_V1withdrawCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type AdminUpgradeabilityProxyApprovalEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  owner: Bytes! # address
+  spender: Bytes! # address
+  value: BigInt! # uint256
+}
+
+type AdminUpgradeabilityProxyMinterAddedEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  account: Bytes! # address
+}
+
+type AdminUpgradeabilityProxyMinterRemovedEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  account: Bytes! # address
+}
+
+type AdminUpgradeabilityProxyTransferEvent @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  from: Bytes! # address
+  to: Bytes! # address
+  value: BigInt! # uint256
+}
+
+type AdminUpgradeabilityProxyaddMinterCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  account: Bytes! # address
+}
+
+type AdminUpgradeabilityProxyapproveCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  spender: Bytes! # address
+  amount: BigInt! # uint256
+  value0: Boolean! # bool
+}
+
+type AdminUpgradeabilityProxydecreaseAllowanceCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  spender: Bytes! # address
+  subtractedValue: BigInt! # uint256
+  value0: Boolean! # bool
+}
+
+type AdminUpgradeabilityProxyincreaseAllowanceCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  spender: Bytes! # address
+  addedValue: BigInt! # uint256
+  value0: Boolean! # bool
+}
+
+type AdminUpgradeabilityProxyinitializeCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  name: String! # string
+  symbol: String! # string
+  decimals: Int! # uint8
+}
+
+type AdminUpgradeabilityProxyinitialize1Call @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type AdminUpgradeabilityProxyinitialize2Call @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  sender: Bytes! # address
+}
+
+type AdminUpgradeabilityProxymintCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  account: Bytes! # address
+  amount: BigInt! # uint256
+  value0: Boolean! # bool
+}
+
+type AdminUpgradeabilityProxyrenounceMinterCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+}
+
+type AdminUpgradeabilityProxytransferCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  recipient: Bytes! # address
+  amount: BigInt! # uint256
+  value0: Boolean! # bool
+}
+
+type AdminUpgradeabilityProxytransferFromCall @entity {
+  id: ID!
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  blockTimestamp: BigInt! # uint256
+  sender: Bytes! # address
+  recipient: Bytes! # address
+  amount: BigInt! # uint256
+  value0: Boolean! # bool
+}

@@ -1,0 +1,1468 @@
+specVersion: 0.0.2
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Curve_to_Curve_Pipe
+    network: mainnet
+    source:
+      address: "0x83c32BF929F80e404ff30Ede7333271460b13cd9"
+      abi: Curve_to_Curve_Pipe
+      startBlock: 10126136
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Curve_to_Curve_PipeOwnershipTransferredEvent
+        - Curve_to_Curve_PipeCurve2CurveCall
+        - Curve_to_Curve_PipeapproveTokenCall
+        - Curve_to_Curve_PipedestructCall
+        - Curve_to_Curve_PipeinCaseTokengetsStuckCall
+        - Curve_to_Curve_PiperenounceOwnershipCall
+        - Curve_to_Curve_PipetoggleContractActiveCall
+        - Curve_to_Curve_PipetransferOwnershipCall
+        - Curve_to_Curve_PipewithdrawCall
+      abis:
+        - name: Curve_to_Curve_Pipe
+          file: Curve_to_Curve_Pipe\abis\Curve_to_Curve_Pipe.json
+      callHandlers:
+        - function: Curve2Curve(address,address,uint256,address)
+          handler: handleCurve2CurveCall
+        - function: approveToken()
+          handler: handleapproveTokenCall
+        - function: destruct()
+          handler: handledestructCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+      file: Curve_to_Curve_Pipe\Curve_to_Curve_Pipe.wasm
+  - kind: ethereum/contract
+    name: Uni_Curve_Pipe
+    network: mainnet
+    source:
+      address: "0x66895417881B1d77Ca71bd9e5Ba1E729f3Aa44D3"
+      abi: Uni_Curve_Pipe
+      startBlock: 10125733
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Uni_Curve_PipeOwnershipTransferredEvent
+        - Uni_Curve_PipeCurve2UniCall
+        - Uni_Curve_PipeUni2CurveCall
+        - Uni_Curve_PipeapproveTokenCall
+        - Uni_Curve_PipedestructCall
+        - Uni_Curve_PipeinCaseTokengetsStuckCall
+        - Uni_Curve_PiperenounceOwnershipCall
+        - Uni_Curve_PipetoggleContractActiveCall
+        - Uni_Curve_PipetransferOwnershipCall
+        - Uni_Curve_PipewithdrawCall
+      abis:
+        - name: Uni_Curve_Pipe
+          file: Uni_Curve_Pipe\abis\Uni_Curve_Pipe.json
+      callHandlers:
+        - function: Curve2Uni(address,address,uint256,address)
+          handler: handleCurve2UniCall
+        - function: Uni2Curve(address,address,uint256,address)
+          handler: handleUni2CurveCall
+        - function: approveToken()
+          handler: handleapproveTokenCall
+        - function: destruct()
+          handler: handledestructCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+      file: Uni_Curve_Pipe\Uni_Curve_Pipe.wasm
+  - kind: ethereum/contract
+    name: ETH_ERC20_Curve_General_Zap_V1
+    network: mainnet
+    source:
+      address: "0x924Cc11Fd506fcE3dAB461AA71a6bb823669EcE3"
+      abi: ETH_ERC20_Curve_General_Zap_V1
+      startBlock: 10067599
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ETH_ERC20_Curve_General_Zap_V1OwnershipTransferredEvent
+        - ETH_ERC20_Curve_General_Zap_V1ZapInCall
+        - ETH_ERC20_Curve_General_Zap_V1approveTokenCall
+        - ETH_ERC20_Curve_General_Zap_V1destructCall
+        - ETH_ERC20_Curve_General_Zap_V1inCaseTokengetsStuckCall
+        - ETH_ERC20_Curve_General_Zap_V1renounceOwnershipCall
+        - ETH_ERC20_Curve_General_Zap_V1setnewdzgoodwillAddressCall
+        - ETH_ERC20_Curve_General_Zap_V1setnewgoodwillCall
+        - ETH_ERC20_Curve_General_Zap_V1toggleContractActiveCall
+        - ETH_ERC20_Curve_General_Zap_V1transferOwnershipCall
+        - ETH_ERC20_Curve_General_Zap_V1withdrawCall
+      abis:
+        - name: ETH_ERC20_Curve_General_Zap_V1
+          file: ETH_ERC20_Curve_General_Zap_V1\abis\ETH_ERC20_Curve_General_Zap_V1.json
+      callHandlers:
+        - function: ZapIn(address,address,address,uint256)
+          handler: handleZapInCall
+        - function: approveToken()
+          handler: handleapproveTokenCall
+        - function: destruct()
+          handler: handledestructCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_dzgoodwillAddress(address)
+          handler: handlesetnewdzgoodwillAddressCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+      file: ETH_ERC20_Curve_General_Zap_V1\ETH_ERC20_Curve_General_Zap_V1.wasm
+  - kind: ethereum/contract
+    name: MultiPoolZapV1_4
+    network: mainnet
+    source:
+      address: "0x7f1cd65679d73EB98fcEBe8b61C13d3D68605717"
+      abi: MultiPoolZapV1_4
+      startBlock: 9978568
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - MultiPoolZapV1_4OwnershipTransferredEvent
+        - MultiPoolZapV1_4multipleZapInCall
+        - MultiPoolZapV1_4renounceOwnershipCall
+        - MultiPoolZapV1_4setUniswapFactoryCall
+        - MultiPoolZapV1_4setnewdzgoodwillAddressCall
+        - MultiPoolZapV1_4setnewgoodwillCall
+        - MultiPoolZapV1_4setuniswapPoolZapAddressCall
+        - MultiPoolZapV1_4transferOwnershipCall
+      abis:
+        - name: MultiPoolZapV1_4
+          file: MultiPoolZapV1_4\abis\MultiPoolZapV1_4.json
+      callHandlers:
+        - function: multipleZapIn(address,uint256,address[],uint256[])
+          handler: handlemultipleZapInCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_UniswapFactory(address)
+          handler: handlesetUniswapFactoryCall
+        - function: set_new_dzgoodwillAddress(address)
+          handler: handlesetnewdzgoodwillAddressCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: set_uniswapPoolZapAddress(address)
+          handler: handlesetuniswapPoolZapAddressCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+      file: MultiPoolZapV1_4\MultiPoolZapV1_4.wasm
+  - kind: ethereum/contract
+    name: ERC20toUniPoolZapV2_General
+    network: mainnet
+    source:
+      address: "0x4f026054B9C934D92cD2db344ea1ae193A22067d"
+      abi: ERC20toUniPoolZapV2_General
+      startBlock: 9628600
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ERC20toUniPoolZapV2_GeneraldetailsEvent
+        - ERC20toUniPoolZapV2_GeneralresidualETHEvent
+        - ERC20toUniPoolZapV2_GeneralLetsInvestCall
+        - ERC20toUniPoolZapV2_GeneralinCaseTokengetsStuckCall
+        - ERC20toUniPoolZapV2_GeneraltoggleContractActiveCall
+        - ERC20toUniPoolZapV2_GeneraltransferOwnershipCall
+        - ERC20toUniPoolZapV2_GeneralwithdrawCall
+      abis:
+        - name: ERC20toUniPoolZapV2_General
+          file: ERC20toUniPoolZapV2_General\abis\ERC20toUniPoolZapV2_General.json
+      callHandlers:
+        - function: LetsInvest(address,address,uint256,address)
+          handler: handleLetsInvestCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: details(indexed address,address,indexed address,indexed address)
+          handler: handledetailsEvent
+        - event: residualETH(uint256)
+          handler: handleresidualETHEvent
+      file: ERC20toUniPoolZapV2_General\ERC20toUniPoolZapV2_General.wasm
+  - kind: ethereum/contract
+    name: ERC20toUniPoolZapV1_General
+    network: mainnet
+    source:
+      address: "0xF0cd9981F15695324763A06869d1c1DD90073C2A"
+      abi: ERC20toUniPoolZapV1_General
+      startBlock: 9551175
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ERC20toUniPoolZapV1_GeneraldetailsEvent
+        - ERC20toUniPoolZapV1_GeneralresidualETHEvent
+        - ERC20toUniPoolZapV1_GeneralLetsInvestCall
+        - ERC20toUniPoolZapV1_GeneralinCaseTokengetsStuckCall
+        - ERC20toUniPoolZapV1_GeneraltoggleContractActiveCall
+        - ERC20toUniPoolZapV1_GeneraltransferOwnershipCall
+        - ERC20toUniPoolZapV1_GeneralwithdrawCall
+      abis:
+        - name: ERC20toUniPoolZapV1_General
+          file: ERC20toUniPoolZapV1_General\abis\ERC20toUniPoolZapV1_General.json
+      callHandlers:
+        - function: LetsInvest(address,address,uint256,address)
+          handler: handleLetsInvestCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: details(indexed address,address,indexed address,indexed address)
+          handler: handledetailsEvent
+        - event: residualETH(uint256)
+          handler: handleresidualETHEvent
+      file: ERC20toUniPoolZapV1_General\ERC20toUniPoolZapV1_General.wasm
+  - kind: ethereum/contract
+    name: Balancer_Unzap_V1_1
+    network: mainnet
+    source:
+      address: "0xF2a5d7D059A9ee3c7622218DB491495517fd619B"
+      abi: Balancer_Unzap_V1_1
+      startBlock: 10347599
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Balancer_Unzap_V1_1OwnershipTransferredEvent
+        - Balancer_Unzap_V1_1ZapoutEvent
+        - Balancer_Unzap_V1_1EasyZapOutCall
+        - Balancer_Unzap_V1_1ZapOutCall
+        - Balancer_Unzap_V1_1destructCall
+        - Balancer_Unzap_V1_1inCaseTokengetsStuckCall
+        - Balancer_Unzap_V1_1renounceOwnershipCall
+        - Balancer_Unzap_V1_1setnewdzgoodwillAddressCall
+        - Balancer_Unzap_V1_1setnewgoodwillCall
+        - Balancer_Unzap_V1_1toggleContractActiveCall
+        - Balancer_Unzap_V1_1transferOwnershipCall
+        - Balancer_Unzap_V1_1updateSlippageCall
+        - Balancer_Unzap_V1_1withdrawCall
+      abis:
+        - name: Balancer_Unzap_V1_1
+          file: Balancer_Unzap_V1_1\abis\Balancer_Unzap_V1_1.json
+      callHandlers:
+        - function: EasyZapOut(address,address,uint256,uint256)
+          handler: handleEasyZapOutCall
+        - function: ZapOut(address,address,address,uint256,address,uint256)
+          handler: handleZapOutCall
+        - function: destruct()
+          handler: handledestructCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_dzgoodwillAddress(address)
+          handler: handlesetnewdzgoodwillAddressCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: updateSlippage(uint256)
+          handler: handleupdateSlippageCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: Zapout(address,address,address,uint256)
+          handler: handleZapoutEvent
+      file: Balancer_Unzap_V1_1\Balancer_Unzap_V1_1.wasm
+  - kind: ethereum/contract
+    name: Balancer_ZapIn_General_V1
+    network: mainnet
+    source:
+      address: "0x85560d8Ee2e714E60645f887Dd4133ee0479B362"
+      abi: Balancer_ZapIn_General_V1
+      startBlock: 10299579
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Balancer_ZapIn_General_V1OwnershipTransferredEvent
+        - Balancer_ZapIn_General_V1ZapinEvent
+        - Balancer_ZapIn_General_V1EasyZapInCall
+        - Balancer_ZapIn_General_V1ZapInCall
+        - Balancer_ZapIn_General_V1destructCall
+        - Balancer_ZapIn_General_V1inCaseTokengetsStuckCall
+        - Balancer_ZapIn_General_V1renounceOwnershipCall
+        - Balancer_ZapIn_General_V1setnewdzgoodwillAddressCall
+        - Balancer_ZapIn_General_V1setnewgoodwillCall
+        - Balancer_ZapIn_General_V1toggleContractActiveCall
+        - Balancer_ZapIn_General_V1transferOwnershipCall
+        - Balancer_ZapIn_General_V1withdrawCall
+      abis:
+        - name: Balancer_ZapIn_General_V1
+          file: Balancer_ZapIn_General_V1\abis\Balancer_ZapIn_General_V1.json
+      callHandlers:
+        - function: EasyZapIn(address,address,uint256)
+          handler: handleEasyZapInCall
+        - function: ZapIn(address,address,address,uint256,address)
+          handler: handleZapInCall
+        - function: destruct()
+          handler: handledestructCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_dzgoodwillAddress(address)
+          handler: handlesetnewdzgoodwillAddressCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: Zapin(address,address,uint256)
+          handler: handleZapinEvent
+      file: Balancer_ZapIn_General_V1\Balancer_ZapIn_General_V1.wasm
+  - kind: ethereum/contract
+    name: Balancer_Unzap_V1_1_1
+    network: mainnet
+    source:
+      address: "0x35B9Ae15EEb12eA934942a36754192A9Bb219742"
+      abi: Balancer_Unzap_V1_1_1
+      startBlock: 10299537
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Balancer_Unzap_V1_1_1OwnershipTransferredEvent
+        - Balancer_Unzap_V1_1_1ZapoutEvent
+        - Balancer_Unzap_V1_1_1EasyZapOutCall
+        - Balancer_Unzap_V1_1_1ZapOutCall
+        - Balancer_Unzap_V1_1_1destructCall
+        - Balancer_Unzap_V1_1_1inCaseTokengetsStuckCall
+        - Balancer_Unzap_V1_1_1renounceOwnershipCall
+        - Balancer_Unzap_V1_1_1setnewdzgoodwillAddressCall
+        - Balancer_Unzap_V1_1_1setnewgoodwillCall
+        - Balancer_Unzap_V1_1_1toggleContractActiveCall
+        - Balancer_Unzap_V1_1_1transferOwnershipCall
+        - Balancer_Unzap_V1_1_1updateSlippageCall
+        - Balancer_Unzap_V1_1_1withdrawCall
+      abis:
+        - name: Balancer_Unzap_V1_1_1
+          file: Balancer_Unzap_V1_1_1\abis\Balancer_Unzap_V1_1_1.json
+      callHandlers:
+        - function: EasyZapOut(address,address,uint256,uint256)
+          handler: handleEasyZapOutCall
+        - function: ZapOut(address,address,address,uint256,address,uint256)
+          handler: handleZapOutCall
+        - function: destruct()
+          handler: handledestructCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_dzgoodwillAddress(address)
+          handler: handlesetnewdzgoodwillAddressCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: updateSlippage(uint256)
+          handler: handleupdateSlippageCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: Zapout(address,address,address,uint256)
+          handler: handleZapoutEvent
+      file: Balancer_Unzap_V1_1_1\Balancer_Unzap_V1_1_1.wasm
+  - kind: ethereum/contract
+    name: UniswapV2_ZapIn
+    network: mainnet
+    source:
+      address: "0x026BdaC2F308C0109A864138CCa1a623F7828F4a"
+      abi: UniswapV2_ZapIn
+      startBlock: 10282044
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - UniswapV2_ZapInOwnershipTransferredEvent
+        - UniswapV2_ZapInZapInCall
+        - UniswapV2_ZapIndestructCall
+        - UniswapV2_ZapIninCaseTokengetsStuckCall
+        - UniswapV2_ZapInrenounceOwnershipCall
+        - UniswapV2_ZapInsetnewdzgoodwillAddressCall
+        - UniswapV2_ZapInsetnewgoodwillCall
+        - UniswapV2_ZapIntoggleContractActiveCall
+        - UniswapV2_ZapIntransferOwnershipCall
+        - UniswapV2_ZapInupdateSlippageCall
+        - UniswapV2_ZapInwithdrawCall
+      abis:
+        - name: UniswapV2_ZapIn
+          file: UniswapV2_ZapIn\abis\UniswapV2_ZapIn.json
+      callHandlers:
+        - function: ZapIn(address,address,address,uint256,uint256)
+          handler: handleZapInCall
+        - function: destruct()
+          handler: handledestructCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_dzgoodwillAddress(address)
+          handler: handlesetnewdzgoodwillAddressCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: updateSlippage(uint256)
+          handler: handleupdateSlippageCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+      file: UniswapV2_ZapIn\UniswapV2_ZapIn.wasm
+  - kind: ethereum/contract
+    name: Balancer_ZapIn_General_V1_1
+    network: mainnet
+    source:
+      address: "0x727412DB12fED07386235D1474257Dc15302CCE5"
+      abi: Balancer_ZapIn_General_V1_1
+      startBlock: 10209078
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Balancer_ZapIn_General_V1_1OwnershipTransferredEvent
+        - Balancer_ZapIn_General_V1_1ZapinEvent
+        - Balancer_ZapIn_General_V1_1EasyZapInCall
+        - Balancer_ZapIn_General_V1_1ZapInCall
+        - Balancer_ZapIn_General_V1_1destructCall
+        - Balancer_ZapIn_General_V1_1inCaseTokengetsStuckCall
+        - Balancer_ZapIn_General_V1_1renounceOwnershipCall
+        - Balancer_ZapIn_General_V1_1setnewdzgoodwillAddressCall
+        - Balancer_ZapIn_General_V1_1setnewgoodwillCall
+        - Balancer_ZapIn_General_V1_1toggleContractActiveCall
+        - Balancer_ZapIn_General_V1_1transferOwnershipCall
+        - Balancer_ZapIn_General_V1_1withdrawCall
+      abis:
+        - name: Balancer_ZapIn_General_V1_1
+          file: Balancer_ZapIn_General_V1_1\abis\Balancer_ZapIn_General_V1_1.json
+      callHandlers:
+        - function: EasyZapIn(address,address,uint256)
+          handler: handleEasyZapInCall
+        - function: ZapIn(address,address,address,uint256,address)
+          handler: handleZapInCall
+        - function: destruct()
+          handler: handledestructCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_dzgoodwillAddress(address)
+          handler: handlesetnewdzgoodwillAddressCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: Zapin(address,address,uint256)
+          handler: handleZapinEvent
+      file: Balancer_ZapIn_General_V1_1\Balancer_ZapIn_General_V1_1.wasm
+  - kind: ethereum/contract
+    name: Uni_V1_V2_Pipe
+    network: mainnet
+    source:
+      address: "0x6d313883C6db5EA58BDD5546F403f1fe27e92690"
+      abi: Uni_V1_V2_Pipe
+      startBlock: 10157647
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Uni_V1_V2_PipeOwnershipTransferredEvent
+        - Uni_V1_V2_PipeliquidityTokensQtyEvent
+        - Uni_V1_V2_PipeV1toV2PipeCall
+        - Uni_V1_V2_PipedestructCall
+        - Uni_V1_V2_PipeinCaseTokengetsStuckCall
+        - Uni_V1_V2_PiperenounceOwnershipCall
+        - Uni_V1_V2_PipesetnewdzgoodwillAddressCall
+        - Uni_V1_V2_PipesetnewgoodwillCall
+        - Uni_V1_V2_PipetoggleContractActiveCall
+        - Uni_V1_V2_PipetransferOwnershipCall
+        - Uni_V1_V2_PipewithdrawCall
+      abis:
+        - name: Uni_V1_V2_Pipe
+          file: Uni_V1_V2_Pipe\abis\Uni_V1_V2_Pipe.json
+      callHandlers:
+        - function: V1_to_V2_Pipe(address,uint256,address,address)
+          handler: handleV1toV2PipeCall
+        - function: destruct()
+          handler: handledestructCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_dzgoodwillAddress(address)
+          handler: handlesetnewdzgoodwillAddressCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: liquidityTokensQty(uint256,address,uint256)
+          handler: handleliquidityTokensQtyEvent
+      file: Uni_V1_V2_Pipe\Uni_V1_V2_Pipe.wasm
+  - kind: ethereum/contract
+    name: Balancer_ZapIn_General_V2
+    network: mainnet
+    source:
+      address: "0x03E86D24C462fa6aD88568053361186E4A5aF68e"
+      abi: Balancer_ZapIn_General_V2
+      startBlock: 10430753
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Balancer_ZapIn_General_V2OwnershipTransferredEvent
+        - Balancer_ZapIn_General_V2ZapinEvent
+        - Balancer_ZapIn_General_V2EasyZapInCall
+        - Balancer_ZapIn_General_V2ZapInCall
+        - Balancer_ZapIn_General_V2destructCall
+        - Balancer_ZapIn_General_V2inCaseTokengetsStuckCall
+        - Balancer_ZapIn_General_V2renounceOwnershipCall
+        - Balancer_ZapIn_General_V2setnewdzgoodwillAddressCall
+        - Balancer_ZapIn_General_V2setnewgoodwillCall
+        - Balancer_ZapIn_General_V2toggleContractActiveCall
+        - Balancer_ZapIn_General_V2transferOwnershipCall
+        - Balancer_ZapIn_General_V2withdrawCall
+      abis:
+        - name: Balancer_ZapIn_General_V2
+          file: Balancer_ZapIn_General_V2\abis\Balancer_ZapIn_General_V2.json
+      callHandlers:
+        - function: EasyZapIn(address,address,uint256,uint256)
+          handler: handleEasyZapInCall
+        - function: ZapIn(address,address,address,uint256,address,uint256)
+          handler: handleZapInCall
+        - function: destruct()
+          handler: handledestructCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_dzgoodwillAddress(address)
+          handler: handlesetnewdzgoodwillAddressCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: Zapin(address,address,uint256)
+          handler: handleZapinEvent
+      file: Balancer_ZapIn_General_V2\Balancer_ZapIn_General_V2.wasm
+  - kind: ethereum/contract
+    name: Balancer_ZapOut_General_V2
+    network: mainnet
+    source:
+      address: "0x5CCb8c39bF68612C7997Cbc498ae55908D32d223"
+      abi: Balancer_ZapOut_General_V2
+      startBlock: 10456820
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Balancer_ZapOut_General_V2OwnershipTransferredEvent
+        - Balancer_ZapOut_General_V2ZapoutEvent
+        - Balancer_ZapOut_General_V2EasyZapOutCall
+        - Balancer_ZapOut_General_V2ZapOutCall
+        - Balancer_ZapOut_General_V2inCaseTokengetsStuckCall
+        - Balancer_ZapOut_General_V2renounceOwnershipCall
+        - Balancer_ZapOut_General_V2setnewdzgoodwillAddressCall
+        - Balancer_ZapOut_General_V2setnewgoodwillCall
+        - Balancer_ZapOut_General_V2toggleContractActiveCall
+        - Balancer_ZapOut_General_V2transferOwnershipCall
+        - Balancer_ZapOut_General_V2withdrawCall
+      abis:
+        - name: Balancer_ZapOut_General_V2
+          file: Balancer_ZapOut_General_V2\abis\Balancer_ZapOut_General_V2.json
+      callHandlers:
+        - function: EasyZapOut(address,address,uint256,uint256)
+          handler: handleEasyZapOutCall
+        - function: ZapOut(address,address,address,uint256,address,uint256)
+          handler: handleZapOutCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_dzgoodwillAddress(address)
+          handler: handlesetnewdzgoodwillAddressCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: Zapout(address,address,address,uint256)
+          handler: handleZapoutEvent
+      file: Balancer_ZapOut_General_V2\Balancer_ZapOut_General_V2.wasm
+  - kind: ethereum/contract
+    name: Curve_General_ZapOut_V2
+    network: mainnet
+    source:
+      address: "0x4bF331Aa2BfB0869315fB81a350d109F4839f81b"
+      abi: Curve_General_ZapOut_V2
+      startBlock: 10534064
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Curve_General_ZapOut_V2OwnershipTransferredEvent
+        - Curve_General_ZapOut_V2ZapOutCall
+        - Curve_General_ZapOut_V2ZapoutToUnderlyingCall
+        - Curve_General_ZapOut_V2token2EthCall
+        - Curve_General_ZapOut_V2token2TokenCall
+        - Curve_General_ZapOut_V2addCRVTokenCall
+        - Curve_General_ZapOut_V2addCTokenCall
+        - Curve_General_ZapOut_V2addYTokenCall
+        - Curve_General_ZapOut_V2approveTokenCall
+        - Curve_General_ZapOut_V2inCaseTokengetsStuckCall
+        - Curve_General_ZapOut_V2renounceOwnershipCall
+        - Curve_General_ZapOut_V2setCRVTokenAddressesCall
+        - Curve_General_ZapOut_V2setnewdzgoodwillAddressCall
+        - Curve_General_ZapOut_V2setnewgoodwillCall
+        - Curve_General_ZapOut_V2setnewsUSDTokenAddressCall
+        - Curve_General_ZapOut_V2setcTokensCall
+        - Curve_General_ZapOut_V2setyTokensCall
+        - Curve_General_ZapOut_V2toggleContractActiveCall
+        - Curve_General_ZapOut_V2transferOwnershipCall
+        - Curve_General_ZapOut_V2withdrawCall
+      abis:
+        - name: Curve_General_ZapOut_V2
+          file: Curve_General_ZapOut_V2\abis\Curve_General_ZapOut_V2.json
+      callHandlers:
+        - function: ZapOut(address,address,uint256,uint256,address,uint256)
+          handler: handleZapOutCall
+        - function: ZapoutToUnderlying(address,address,uint256,uint256)
+          handler: handleZapoutToUnderlyingCall
+        - function: _token2Eth(address,uint256,address)
+          handler: handletoken2EthCall
+        - function: _token2Token(address,address,address,uint256)
+          handler: handletoken2TokenCall
+        - function: addCRVToken(address,address)
+          handler: handleaddCRVTokenCall
+        - function: addCToken(address,address)
+          handler: handleaddCTokenCall
+        - function: addYToken(address,address)
+          handler: handleaddYTokenCall
+        - function: approveToken()
+          handler: handleapproveTokenCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: setCRVTokenAddresses()
+          handler: handlesetCRVTokenAddressesCall
+        - function: set_new_dzgoodwillAddress(address)
+          handler: handlesetnewdzgoodwillAddressCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: set_new_sUSDTokenAddress(address)
+          handler: handlesetnewsUSDTokenAddressCall
+        - function: setcTokens()
+          handler: handlesetcTokensCall
+        - function: setyTokens()
+          handler: handlesetyTokensCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+      file: Curve_General_ZapOut_V2\Curve_General_ZapOut_V2.wasm
+  - kind: ethereum/contract
+    name: UniswapV1_ZapOut_General_V2
+    network: mainnet
+    source:
+      address: "0x5e6531D99e9099CB3936C048dAF6BA0b3F79B9e2"
+      abi: UniswapV1_ZapOut_General_V2
+      startBlock: 10573923
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - UniswapV1_ZapOut_General_V2OwnershipTransferredEvent
+        - UniswapV1_ZapOut_General_V2detailsEvent
+        - UniswapV1_ZapOut_General_V2LetsWithdrawonlyERCCall
+        - UniswapV1_ZapOut_General_V2LetsWithdrawonlyETHCall
+        - UniswapV1_ZapOut_General_V2inCaseTokengetsStuckCall
+        - UniswapV1_ZapOut_General_V2renounceOwnershipCall
+        - UniswapV1_ZapOut_General_V2setnewgoodwillCall
+        - UniswapV1_ZapOut_General_V2toggleContractActiveCall
+        - UniswapV1_ZapOut_General_V2transferOwnershipCall
+        - UniswapV1_ZapOut_General_V2withdrawCall
+      abis:
+        - name: UniswapV1_ZapOut_General_V2
+          file: UniswapV1_ZapOut_General_V2\abis\UniswapV1_ZapOut_General_V2.json
+      callHandlers:
+        - function: LetsWithdraw_onlyERC(address,uint256,uint256,bool)
+          handler: handleLetsWithdrawonlyERCCall
+        - function: LetsWithdraw_onlyETH(address,uint256,uint256)
+          handler: handleLetsWithdrawonlyETHCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: details(indexed address,address,address,uint256,uint256,uint256,indexed string)
+          handler: handledetailsEvent
+      file: UniswapV1_ZapOut_General_V2\UniswapV1_ZapOut_General_V2.wasm
+  - kind: ethereum/contract
+    name: yVault_ZapInOut_General_V1_1
+    network: mainnet
+    source:
+      address: "0x02e75fE4E8f8531421ee22f4560664685c3f07DE"
+      abi: yVault_ZapInOut_General_V1_1
+      startBlock: 10670217
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - yVault_ZapInOut_General_V1_1OwnershipTransferredEvent
+        - yVault_ZapInOut_General_V1_1ZapinEvent
+        - yVault_ZapInOut_General_V1_1ZapoutEvent
+        - yVault_ZapInOut_General_V1_1ZapInCall
+        - yVault_ZapInOut_General_V1_1ZapOutToUnderlyingCall
+        - yVault_ZapInOut_General_V1_1addNewYVaultCall
+        - yVault_ZapInOut_General_V1_1inCaseTokengetsStuckCall
+        - yVault_ZapInOut_General_V1_1renounceOwnershipCall
+        - yVault_ZapInOut_General_V1_1setnewgoodwillCall
+        - yVault_ZapInOut_General_V1_1toggleContractActiveCall
+        - yVault_ZapInOut_General_V1_1transferOwnershipCall
+        - yVault_ZapInOut_General_V1_1updateCurveZapInCall
+        - yVault_ZapInOut_General_V1_1withdrawCall
+      abis:
+        - name: yVault_ZapInOut_General_V1_1
+          file: yVault_ZapInOut_General_V1_1\abis\yVault_ZapInOut_General_V1_1.json
+      callHandlers:
+        - function: ZapIn(address,address,uint16,address,uint256,uint256)
+          handler: handleZapInCall
+        - function: ZapOutToUnderlying(address,address,uint256)
+          handler: handleZapOutToUnderlyingCall
+        - function: addNewYVault(address,string)
+          handler: handleaddNewYVaultCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: updateCurveZapIn(address)
+          handler: handleupdateCurveZapInCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: Zapin(address,address,uint256)
+          handler: handleZapinEvent
+        - event: Zapout(address,address,address,uint256)
+          handler: handleZapoutEvent
+      file: yVault_ZapInOut_General_V1_1\yVault_ZapInOut_General_V1_1.wasm
+  - kind: ethereum/contract
+    name: Balancer_ZapOut_General_V2_2
+    network: mainnet
+    source:
+      address: "0x00d0f137b51692D0AC708bdE7b367a373865cFfe"
+      abi: Balancer_ZapOut_General_V2_2
+      startBlock: 10714508
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Balancer_ZapOut_General_V2_2OwnershipTransferredEvent
+        - Balancer_ZapOut_General_V2_2ZapoutEvent
+        - Balancer_ZapOut_General_V2_2EasyZapOutCall
+        - Balancer_ZapOut_General_V2_2inCaseTokengetsStuckCall
+        - Balancer_ZapOut_General_V2_2renounceOwnershipCall
+        - Balancer_ZapOut_General_V2_2setnewgoodwillCall
+        - Balancer_ZapOut_General_V2_2toggleContractActiveCall
+        - Balancer_ZapOut_General_V2_2transferOwnershipCall
+        - Balancer_ZapOut_General_V2_2withdrawCall
+      abis:
+        - name: Balancer_ZapOut_General_V2_2
+          file: Balancer_ZapOut_General_V2_2\abis\Balancer_ZapOut_General_V2_2.json
+      callHandlers:
+        - function: EasyZapOut(address,address,uint256,uint256)
+          handler: handleEasyZapOutCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: Zapout(address,address,address,uint256)
+          handler: handleZapoutEvent
+      file: Balancer_ZapOut_General_V2_2\Balancer_ZapOut_General_V2_2.wasm
+  - kind: ethereum/contract
+    name: yVault_ZapInOut_General_V1_2
+    network: mainnet
+    source:
+      address: "0xcAde5569Bd2946db60F23624956d209ae903De4D"
+      abi: yVault_ZapInOut_General_V1_2
+      startBlock: 10708945
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - yVault_ZapInOut_General_V1_2OwnershipTransferredEvent
+        - yVault_ZapInOut_General_V1_2ZapinEvent
+        - yVault_ZapInOut_General_V1_2ZapoutEvent
+        - yVault_ZapInOut_General_V1_2ZapInCall
+        - yVault_ZapInOut_General_V1_2ZapOutCall
+        - yVault_ZapInOut_General_V1_2inCaseTokengetsStuckCall
+        - yVault_ZapInOut_General_V1_2renounceOwnershipCall
+        - yVault_ZapInOut_General_V1_2setnewgoodwillCall
+        - yVault_ZapInOut_General_V1_2toggleContractActiveCall
+        - yVault_ZapInOut_General_V1_2transferOwnershipCall
+        - yVault_ZapInOut_General_V1_2updateCurveZapInCall
+        - yVault_ZapInOut_General_V1_2updateCurveZapOutCall
+        - yVault_ZapInOut_General_V1_2withdrawCall
+      abis:
+        - name: yVault_ZapInOut_General_V1_2
+          file: yVault_ZapInOut_General_V1_2\abis\yVault_ZapInOut_General_V1_2.json
+      callHandlers:
+        - function: ZapIn(address,address,uint16,address,uint256,uint256)
+          handler: handleZapInCall
+        - function: ZapOut(address,address,address,uint16,uint256,uint256)
+          handler: handleZapOutCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: updateCurveZapIn(address)
+          handler: handleupdateCurveZapInCall
+        - function: updateCurveZapOut(address)
+          handler: handleupdateCurveZapOutCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: Zapin(address,address,uint256)
+          handler: handleZapinEvent
+        - event: Zapout(address,address,address,uint256)
+          handler: handleZapoutEvent
+      file: yVault_ZapInOut_General_V1_2\yVault_ZapInOut_General_V1_2.wasm
+  - kind: ethereum/contract
+    name: yVault_ZapInOut_General_V1_3
+    network: mainnet
+    source:
+      address: "0xf8C8D0C5547bD213b1DD281a4F61be9a9feED87B"
+      abi: yVault_ZapInOut_General_V1_3
+      startBlock: 10742502
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - yVault_ZapInOut_General_V1_3OwnershipTransferredEvent
+        - yVault_ZapInOut_General_V1_3ZapinEvent
+        - yVault_ZapInOut_General_V1_3ZapoutEvent
+        - yVault_ZapInOut_General_V1_3ZapInCall
+        - yVault_ZapInOut_General_V1_3ZapOutCall
+        - yVault_ZapInOut_General_V1_3addNewCurveExchangeCall
+        - yVault_ZapInOut_General_V1_3inCaseTokengetsStuckCall
+        - yVault_ZapInOut_General_V1_3renounceOwnershipCall
+        - yVault_ZapInOut_General_V1_3setnewgoodwillCall
+        - yVault_ZapInOut_General_V1_3toggleContractActiveCall
+        - yVault_ZapInOut_General_V1_3transferOwnershipCall
+        - yVault_ZapInOut_General_V1_3updateCurveZapInCall
+        - yVault_ZapInOut_General_V1_3updateCurveZapOutCall
+        - yVault_ZapInOut_General_V1_3withdrawCall
+      abis:
+        - name: yVault_ZapInOut_General_V1_3
+          file: yVault_ZapInOut_General_V1_3\abis\yVault_ZapInOut_General_V1_3.json
+      callHandlers:
+        - function: ZapIn(address,address,uint16,address,uint256,uint256)
+          handler: handleZapInCall
+        - function: ZapOut(address,address,address,uint16,uint256,uint256)
+          handler: handleZapOutCall
+        - function: addNewCurveExchange(address,address)
+          handler: handleaddNewCurveExchangeCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: updateCurveZapIn(address)
+          handler: handleupdateCurveZapInCall
+        - function: updateCurveZapOut(address)
+          handler: handleupdateCurveZapOutCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: Zapin(address,address,uint256)
+          handler: handleZapinEvent
+        - event: Zapout(address,address,address,uint256)
+          handler: handleZapoutEvent
+      file: yVault_ZapInOut_General_V1_3\yVault_ZapInOut_General_V1_3.wasm
+  - kind: ethereum/contract
+    name: yVault_ZapInOut_General_V1_4
+    network: mainnet
+    source:
+      address: "0x9c57618bfCDfaE4cE8e49226Ca22A7837DE64A2d"
+      abi: yVault_ZapInOut_General_V1_4
+      startBlock: 10781676
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - yVault_ZapInOut_General_V1_4OwnershipTransferredEvent
+        - yVault_ZapInOut_General_V1_4ZapinEvent
+        - yVault_ZapInOut_General_V1_4ZapoutEvent
+        - yVault_ZapInOut_General_V1_4ZapInCall
+        - yVault_ZapInOut_General_V1_4ZapOutCall
+        - yVault_ZapInOut_General_V1_4addNewCurveExchangeCall
+        - yVault_ZapInOut_General_V1_4inCaseTokengetsStuckCall
+        - yVault_ZapInOut_General_V1_4renounceOwnershipCall
+        - yVault_ZapInOut_General_V1_4setnewgoodwillCall
+        - yVault_ZapInOut_General_V1_4toggleContractActiveCall
+        - yVault_ZapInOut_General_V1_4transferOwnershipCall
+        - yVault_ZapInOut_General_V1_4updateCurveZapInCall
+        - yVault_ZapInOut_General_V1_4updateCurveZapOutCall
+        - yVault_ZapInOut_General_V1_4withdrawCall
+      abis:
+        - name: yVault_ZapInOut_General_V1_4
+          file: yVault_ZapInOut_General_V1_4\abis\yVault_ZapInOut_General_V1_4.json
+      callHandlers:
+        - function: ZapIn(address,address,uint16,address,uint256,uint256)
+          handler: handleZapInCall
+        - function: ZapOut(address,address,address,uint16,uint256,uint256)
+          handler: handleZapOutCall
+        - function: addNewCurveExchange(address,address)
+          handler: handleaddNewCurveExchangeCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: updateCurveZapIn(address)
+          handler: handleupdateCurveZapInCall
+        - function: updateCurveZapOut(address)
+          handler: handleupdateCurveZapOutCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: Zapin(address,address,uint256)
+          handler: handleZapinEvent
+        - event: Zapout(address,address,address,uint256)
+          handler: handleZapoutEvent
+      file: yVault_ZapInOut_General_V1_4\yVault_ZapInOut_General_V1_4.wasm
+  - kind: ethereum/contract
+    name: Balancer_ZapIn_General_V2_6
+    network: mainnet
+    source:
+      address: "0xA3128cC400E2878571368ae0a83F588Eb838552b"
+      abi: Balancer_ZapIn_General_V2_6
+      startBlock: 10801263
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Balancer_ZapIn_General_V2_6OwnershipTransferredEvent
+        - Balancer_ZapIn_General_V2_6zapEvent
+        - Balancer_ZapIn_General_V2_6ZapInCall
+        - Balancer_ZapIn_General_V2_6inCaseTokengetsStuckCall
+        - Balancer_ZapIn_General_V2_6renounceOwnershipCall
+        - Balancer_ZapIn_General_V2_6setnewgoodwillCall
+        - Balancer_ZapIn_General_V2_6setnewzgoodwillAddressCall
+        - Balancer_ZapIn_General_V2_6toggleContractActiveCall
+        - Balancer_ZapIn_General_V2_6transferOwnershipCall
+        - Balancer_ZapIn_General_V2_6withdrawCall
+      abis:
+        - name: Balancer_ZapIn_General_V2_6
+          file: Balancer_ZapIn_General_V2_6\abis\Balancer_ZapIn_General_V2_6.json
+      callHandlers:
+        - function: ZapIn(address,address,uint256,uint256)
+          handler: handleZapInCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: set_new_zgoodwillAddress(address)
+          handler: handlesetnewzgoodwillAddressCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+        - event: zap(address,address,address,uint256,uint256)
+          handler: handlezapEvent
+      file: Balancer_ZapIn_General_V2_6\Balancer_ZapIn_General_V2_6.wasm
+  - kind: ethereum/contract
+    name: Balancer_UniswapV2_Pipe_V1_4
+    network: mainnet
+    source:
+      address: "0xA3149708cb9D9BD31CB5c8F5c107D94395B7bA64"
+      abi: Balancer_UniswapV2_Pipe_V1_4
+      startBlock: 10806893
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Balancer_UniswapV2_Pipe_V1_4OwnershipTransferredEvent
+        - Balancer_UniswapV2_Pipe_V1_4PipeBalancerUniV2Call
+        - Balancer_UniswapV2_Pipe_V1_4PipeUniV2BalancerCall
+        - Balancer_UniswapV2_Pipe_V1_4inCaseTokengetsStuckCall
+        - Balancer_UniswapV2_Pipe_V1_4renounceOwnershipCall
+        - Balancer_UniswapV2_Pipe_V1_4setBalancerZapOutCall
+        - Balancer_UniswapV2_Pipe_V1_4setUniswapV2ZapInCall
+        - Balancer_UniswapV2_Pipe_V1_4setUniswapV2ZapOutCall
+        - Balancer_UniswapV2_Pipe_V1_4setbalancerZapInCall
+        - Balancer_UniswapV2_Pipe_V1_4toggleContractActiveCall
+        - Balancer_UniswapV2_Pipe_V1_4transferOwnershipCall
+        - Balancer_UniswapV2_Pipe_V1_4withdrawCall
+      abis:
+        - name: Balancer_UniswapV2_Pipe_V1_4
+          file: Balancer_UniswapV2_Pipe_V1_4\abis\Balancer_UniswapV2_Pipe_V1_4.json
+      callHandlers:
+        - function: PipeBalancerUniV2(address,uint256,address,address,uint256)
+          handler: handlePipeBalancerUniV2Call
+        - function: PipeUniV2Balancer(address,uint256,address,address,uint256)
+          handler: handlePipeUniV2BalancerCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: setBalancerZapOut(address)
+          handler: handlesetBalancerZapOutCall
+        - function: setUniswapV2ZapIn(address)
+          handler: handlesetUniswapV2ZapInCall
+        - function: setUniswapV2ZapOut(address)
+          handler: handlesetUniswapV2ZapOutCall
+        - function: setbalancerZapIn(address)
+          handler: handlesetbalancerZapInCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+      file: Balancer_UniswapV2_Pipe_V1_4\Balancer_UniswapV2_Pipe_V1_4.wasm
+  - kind: ethereum/contract
+    name: Zapper_Swap_General_V1_3
+    network: mainnet
+    source:
+      address: "0xacDF47C844Eff0Ecb218D8945e28A9A484aF8D07"
+      abi: Zapper_Swap_General_V1_3
+      startBlock: 10942633
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Zapper_Swap_General_V1_3OwnershipTransferredEvent
+        - Zapper_Swap_General_V1_3MultiExchangeSwapCall
+        - Zapper_Swap_General_V1_3addATokenCall
+        - Zapper_Swap_General_V1_3addCTokenCall
+        - Zapper_Swap_General_V1_3addYTokenCall
+        - Zapper_Swap_General_V1_3inCaseTokengetsStuckCall
+        - Zapper_Swap_General_V1_3renounceOwnershipCall
+        - Zapper_Swap_General_V1_3toggleContractActiveCall
+        - Zapper_Swap_General_V1_3transferOwnershipCall
+        - Zapper_Swap_General_V1_3unwrapCall
+        - Zapper_Swap_General_V1_3unwrapWethCall
+        - Zapper_Swap_General_V1_3wrapCall
+      abis:
+        - name: Zapper_Swap_General_V1_3
+          file: Zapper_Swap_General_V1_3\abis\Zapper_Swap_General_V1_3.json
+      callHandlers:
+        - function: MultiExchangeSwap(address,address[],uint256,uint256,uint8[],uint8[],address[])
+          handler: handleMultiExchangeSwapCall
+        - function: addAToken(address[])
+          handler: handleaddATokenCall
+        - function: addCToken(address[])
+          handler: handleaddCTokenCall
+        - function: addYToken(address[])
+          handler: handleaddYTokenCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: unwrap(address,address,uint256,uint256)
+          handler: handleunwrapCall
+        - function: unwrapWeth(address,address,uint256,uint256)
+          handler: handleunwrapWethCall
+        - function: wrap(address,address,address,uint256,uint256,uint256)
+          handler: handlewrapCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+      file: Zapper_Swap_General_V1_3\Zapper_Swap_General_V1_3.wasm
+  - kind: ethereum/contract
+    name: UniswapV2_ZapIn_General_V2_4_1
+    network: mainnet
+    source:
+      address: "0x0286Ab4C526C0F28EC31dBb08755C999f441A58F"
+      abi: UniswapV2_ZapIn_General_V2_4_1
+      startBlock: 11038137
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - UniswapV2_ZapIn_General_V2_4_1OwnershipTransferredEvent
+        - UniswapV2_ZapIn_General_V2_4_1ZapInCall
+        - UniswapV2_ZapIn_General_V2_4_1inCaseTokengetsStuckCall
+        - UniswapV2_ZapIn_General_V2_4_1renounceOwnershipCall
+        - UniswapV2_ZapIn_General_V2_4_1setnewgoodwillCall
+        - UniswapV2_ZapIn_General_V2_4_1toggleContractActiveCall
+        - UniswapV2_ZapIn_General_V2_4_1transferOwnershipCall
+        - UniswapV2_ZapIn_General_V2_4_1withdrawCall
+      abis:
+        - name: UniswapV2_ZapIn_General_V2_4_1
+          file: UniswapV2_ZapIn_General_V2_4_1\abis\UniswapV2_ZapIn_General_V2_4_1.json
+      callHandlers:
+        - function: ZapIn(address,address,address,address,uint256,uint256)
+          handler: handleZapInCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+      file: UniswapV2_ZapIn_General_V2_4_1\UniswapV2_ZapIn_General_V2_4_1.wasm
+  - kind: ethereum/contract
+    name: Curve_ZapIn_General_V1_9
+    network: mainnet
+    source:
+      address: "0xcCdd1f20Fd50DD63849A87994bdD11806e4363De"
+      abi: Curve_ZapIn_General_V1_9
+      startBlock: 11066396
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Curve_ZapIn_General_V1_9OwnershipTransferredEvent
+        - Curve_ZapIn_General_V1_9ZapInCall
+        - Curve_ZapIn_General_V1_9addPoolCall
+        - Curve_ZapIn_General_V1_9inCaseTokengetsStuckCall
+        - Curve_ZapIn_General_V1_9renounceOwnershipCall
+        - Curve_ZapIn_General_V1_9setnewgoodwillCall
+        - Curve_ZapIn_General_V1_9setnewzgoodwillAddressCall
+        - Curve_ZapIn_General_V1_9toggleContractActiveCall
+        - Curve_ZapIn_General_V1_9transferOwnershipCall
+        - Curve_ZapIn_General_V1_9updateIntermediateStableCall
+        - Curve_ZapIn_General_V1_9updatePoolCall
+        - Curve_ZapIn_General_V1_9withdrawCall
+      abis:
+        - name: Curve_ZapIn_General_V1_9
+          file: Curve_ZapIn_General_V1_9\abis\Curve_ZapIn_General_V1_9.json
+      callHandlers:
+        - function: ZapIn(address,address,address,uint256,uint256)
+          handler: handleZapInCall
+        - function: addPool(address,address,address[4],bool)
+          handler: handleaddPoolCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: set_new_zgoodwillAddress(address)
+          handler: handlesetnewzgoodwillAddressCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: updateIntermediateStable(address)
+          handler: handleupdateIntermediateStableCall
+        - function: updatePool(address,address,address[4],bool)
+          handler: handleupdatePoolCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+      file: Curve_ZapIn_General_V1_9\Curve_ZapIn_General_V1_9.wasm
+  - kind: ethereum/contract
+    name: Unipool_Bridge_Zap_V1
+    network: mainnet
+    source:
+      address: "0xaecCd58001D52B4b931FD6FD5bF87D4F911100B7"
+      abi: Unipool_Bridge_Zap_V1
+      startBlock: 10113653
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Unipool_Bridge_Zap_V1OwnershipTransferredEvent
+        - Unipool_Bridge_Zap_V1ZapBridgeCall
+        - Unipool_Bridge_Zap_V1destructCall
+        - Unipool_Bridge_Zap_V1inCaseTokengetsStuckCall
+        - Unipool_Bridge_Zap_V1renounceOwnershipCall
+        - Unipool_Bridge_Zap_V1setnewUniSwapFactoryAddressCall
+        - Unipool_Bridge_Zap_V1setnewdzgoodwillAddressCall
+        - Unipool_Bridge_Zap_V1setnewgoodwillCall
+        - Unipool_Bridge_Zap_V1toggleContractActiveCall
+        - Unipool_Bridge_Zap_V1transferOwnershipCall
+        - Unipool_Bridge_Zap_V1withdrawCall
+      abis:
+        - name: Unipool_Bridge_Zap_V1
+          file: Unipool_Bridge_Zap_V1\abis\Unipool_Bridge_Zap_V1.json
+      callHandlers:
+        - function: ZapBridge(address,address,address,uint256)
+          handler: handleZapBridgeCall
+        - function: destruct()
+          handler: handledestructCall
+        - function: inCaseTokengetsStuck(address)
+          handler: handleinCaseTokengetsStuckCall
+        - function: renounceOwnership()
+          handler: handlerenounceOwnershipCall
+        - function: set_new_UniSwapFactoryAddress(address)
+          handler: handlesetnewUniSwapFactoryAddressCall
+        - function: set_new_dzgoodwillAddress(address)
+          handler: handlesetnewdzgoodwillAddressCall
+        - function: set_new_goodwill(uint16)
+          handler: handlesetnewgoodwillCall
+        - function: toggleContractActive()
+          handler: handletoggleContractActiveCall
+        - function: transferOwnership(address)
+          handler: handletransferOwnershipCall
+        - function: withdraw()
+          handler: handlewithdrawCall
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferredEvent
+      file: Unipool_Bridge_Zap_V1\Unipool_Bridge_Zap_V1.wasm
+  - kind: ethereum/contract
+    name: AdminUpgradeabilityProxy
+    network: mainnet
+    source:
+      address: "0x97402249515994Cc0D22092D3375033Ad0ea438A"
+      abi: AdminUpgradeabilityProxy
+      startBlock: 9330803
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - AdminUpgradeabilityProxyApprovalEvent
+        - AdminUpgradeabilityProxyMinterAddedEvent
+        - AdminUpgradeabilityProxyMinterRemovedEvent
+        - AdminUpgradeabilityProxyTransferEvent
+        - AdminUpgradeabilityProxyaddMinterCall
+        - AdminUpgradeabilityProxyapproveCall
+        - AdminUpgradeabilityProxydecreaseAllowanceCall
+        - AdminUpgradeabilityProxyincreaseAllowanceCall
+        - AdminUpgradeabilityProxyinitializeCall
+        - AdminUpgradeabilityProxyinitialize1Call
+        - AdminUpgradeabilityProxyinitialize2Call
+        - AdminUpgradeabilityProxymintCall
+        - AdminUpgradeabilityProxyrenounceMinterCall
+        - AdminUpgradeabilityProxytransferCall
+        - AdminUpgradeabilityProxytransferFromCall
+      abis:
+        - name: AdminUpgradeabilityProxy
+          file: AdminUpgradeabilityProxy\abis\AdminUpgradeabilityProxy.json
+      callHandlers:
+        - function: addMinter(address)
+          handler: handleaddMinterCall
+        - function: approve(address,uint256)
+          handler: handleapproveCall
+        - function: decreaseAllowance(address,uint256)
+          handler: handledecreaseAllowanceCall
+        - function: increaseAllowance(address,uint256)
+          handler: handleincreaseAllowanceCall
+        - function: initialize(string,string,uint8)
+          handler: handleinitializeCall
+        - function: initialize()
+          handler: handleinitialize1Call
+        - function: initialize(address)
+          handler: handleinitialize2Call
+        - function: mint(address,uint256)
+          handler: handlemintCall
+        - function: renounceMinter()
+          handler: handlerenounceMinterCall
+        - function: transfer(address,uint256)
+          handler: handletransferCall
+        - function: transferFrom(address,address,uint256)
+          handler: handletransferFromCall
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApprovalEvent
+        - event: MinterAdded(indexed address)
+          handler: handleMinterAddedEvent
+        - event: MinterRemoved(indexed address)
+          handler: handleMinterRemovedEvent
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransferEvent
+      file: AdminUpgradeabilityProxy\AdminUpgradeabilityProxy.wasm
